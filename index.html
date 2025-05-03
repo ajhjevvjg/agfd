@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahad & Eraj – Our Love Story</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #e91e63, #f48fb1);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #e91e63;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f8bbd0;
+      display: inline-block;
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      color: #d81b60;
+    }
+
+    .timeline-item p {
+      margin: 5px 0 15px;
+    }
+
+    /* Photo Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Overlay for Click Animation */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-content {
+      text-align: center;
+      color: white;
+      font-size: 2.5em;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 50px;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInText 1.5s ease-in-out forwards;
+    }
+
+    .close-btn {
+      font-size: 1.5em;
+      color: white;
+      background: #e91e63;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .gallery img {
+        max-width: 100%;
+      }
+    }
+
+    /* Fixed Footer */
+    footer {
+      background: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    footer p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌸 Welcome Header -->
+  <header>
+    <h1>Ahad ❤️ Eraj</h1>
+    <p>A journey from cousins to soulmates 💍</p>
+  </header>
+
+  <!-- 🕰️ Timeline Section -->
+  <div class="section">
+    <h2>Our Journey💕</h2>
+    <div class="timeline-item">
+      <h3>👶 Cousins Since Birth</h3>
+      <p>From childhood mischief to grown-up dreams — our story began before we even knew it.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>💍 Rishta Pakka - 28 December 2024</h3>
+      <p>The day our bond became a promise. A memory forever.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>🌟 Future Together</h3>
+      <p>Hand in hand, walking toward a beautiful future full of love and dreams.</p>
+    </div>
+  </div>
+
+  <!-- 🖼️ Photo Gallery with Animation -->
+  <div class="section">
+    <h2>Her Photos❤️</h2>
+    <div class="gallery">
+      <!-- 👇 Replace with actual photos -->
+      <img src="/photo.2.jpeg" alt="Eraj Photo 1" onclick="showOverlay('I Love You, Eraj! ❤️')">
+      <img src="/photo.3.jpeg" alt="Eraj Photo 2" onclick="showOverlay('You mean everything to me! 💕')">
+      <img src="/photo.4.jpeg" alt="Together" onclick="showOverlay('Together forever! 💍')">
+    </div>
+  </div>
+
+  <!-- 🖋️ Sweet Notes -->
+  <div class="section">
+    <h2>Sweet Notes💌✨</h2>
+    <div class="note">I’ve known you forever, but now I get to love you forever.</div>
+    <div class="note">From cousin to companion — destiny wrote our story beautifully.</div>
+    <div class="note">You’re not just my fiancée, you're my forever best friend. ❤️</div>
+  </div>
+
+  <!-- ⏳ Countdown -->
+  <div class="section">
+    <h2>Countdown to Our Wedding🤩🎉</h2>
+    <p class="countdown" id="countdown">Coming Soon...</p>
+  </div>
+
+  <!-- 💖 Final Love Note -->
+  <div class="section">
+    <h2>A Final Love Note❤️🌙✨</h2>
+    <p class="note">
+      Eraj, you’ve always been part of my life — now you are my life. Every moment with you feels like home, and I can’t wait to build a lifetime of memories together. 💗
+    </p>
+  </div>
+
+  <!-- 🌙 Footer -->
+  <footer>
+    <p>Made with 💖 by Ahad for Eraj</p>
+  </footer>
+
+  <!-- Overlay Script for Image Click -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-content" id="overlay-content">
+      <p id="overlay-text"></p>
+      <button class="close-btn" onclick="closeOverlay()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showOverlay(message) {
+      document.getElementById('overlay-text').innerText = message;
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    // 🗓️ Set Your Wedding Date Here
+    const weddingDate = new Date("2029-12-28T00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "Wedding Time! 💍";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
